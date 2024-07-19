@@ -188,15 +188,18 @@
         <p> <i class="fa-solid fa-envelopes-bulk"></i>hdhaja@gmail.com</p>
       </div>
 
-      <form action="POST" class="col-md-2  text-center">
+      <form method="post" class="col-md-2  text-center">
+        <input type="text" placeholder="college name" name="college_name" >
+        <input type="email" placeholder="email" name="email" >
+        <input type="text" placeholder="phone" name="phone" >
        
 
-        <textarea id="inquiry" name="inquiry" rows="4" cols="50" placeholder="Drop Your Inquiry">
+        <textarea id="inquiry" name="message" rows="4" cols="50" placeholder="Drop Your Inquiry">
         </textarea><br>
         <!-- HTML !-->
 <button class="button" role="button">Submit</button>
 
-
+{% csrf_token %}
       </form>
 
   </div>

@@ -21,4 +21,6 @@ from app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home,name='home'),
+    path('api/message/', views.ContactMessageView.as_view(),name='contactmessage'),
+    path('api/message/<int:pk>/', views.ContactMessageRetrieveUpdateDestroyView.as_view(),name='contact_message_retreive_update_view'),
 ]
