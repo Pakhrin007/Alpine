@@ -172,7 +172,7 @@
 <!-- footer section -->
 
 <section id="footer">
-  <img src="images/wave2.png" class="footer-img" alt="">
+  <img src="images/wave1.png" class="footer-img" alt="">
 <div class="container">
   <div class="row">
     <div class="col-md-4 footer-box text-center">
@@ -188,19 +188,14 @@
         <p> <i class="fa-solid fa-envelopes-bulk"></i>hdhaja@gmail.com</p>
       </div>
 
-      <form method="post" class="col-md-2  text-center">
-        <input type="text" placeholder="college name" name="college_name" >
-        <input type="email" placeholder="email" name="email" >
-        <input type="text" placeholder="phone" name="phone" >
-       
-
-        <textarea id="inquiry" name="message" rows="4" cols="50" placeholder="Drop Your Inquiry">
-        </textarea><br>
-        <!-- HTML !-->
-<button class="button" role="button">Submit</button>
-
-{% csrf_token %}
-      </form>
+      <form method="post" class="col-md-4 footer-form text-center" style="padding: 15px; margin-left: 80px;">
+        <input type="text" placeholder="college name" name="college_name" style="width: 100%; margin-bottom: 10px; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+        <input type="email" placeholder="email" name="email" style="width: 100%; margin-bottom: 10px; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+        <input type="text" placeholder="phone" name="phone" style="width: 100%; margin-bottom: 10px; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+        <textarea id="inquiry" name="message" rows="4" cols="50" placeholder="Drop Your Inquiry" style="width: 100%; margin-bottom: 10px; padding: 8px; border: 1px solid #ccc; border-radius: 4px; resize: vertical;"></textarea><br>
+        <button class="button" role="button" style="background-color: #0d6efd; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer;margin-right: 200px;">Submit</button>
+        {% csrf_token %}
+    </form>
 
   </div>
 </div>

@@ -16,11 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app import views
+from app import views  # Make sure this import is correct
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home,name='home'),
-    path('api/message/', views.ContactMessageView.as_view(),name='contactmessage'),
-    path('api/message/<int:pk>/', views.ContactMessageRetrieveUpdateDestroyView.as_view(),name='contact_message_retreive_update_view'),
+    path('', views.home, name='home'),
+    # path('api/message/', views.ContactMessageView.as_view(), name='contactmessage'),
+    # path('api/message/<int:pk>/', views.ContactMessageRetrieveUpdateDestroyView.as_view(), name='contact_message_retreive_update_view'),
 ]
